@@ -1,0 +1,13 @@
+#GLOBAL VARIABLE HERE
+INDIR = "RAW/"
+OUTDIR = "MAPPING/"
+THREADS = 1
+R1 = "_R1"
+R2 = "_R2"
+GENOME = "ressources/hg19"
+#INCLUDE RULES
+include:"rules/bwa_mem.smk"
+include:"rules/samtools.smk"
+#MAIN RULE
+rule all:
+  input:expand(OUTDIR+"mapping/{prefix}.bam",prefix=["sample1","sample2"])
