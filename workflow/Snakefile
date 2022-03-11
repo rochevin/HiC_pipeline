@@ -1,6 +1,7 @@
 #GLOBAL VARIABLE HERE
 INDIR = "RAW/"
 OUTDIR = "MAPPING/"
+THREADS = 1
 R1 = "_R1"
 R2 = "_R2"
 GENOME = "ressources/hg19"
